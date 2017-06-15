@@ -1,3 +1,4 @@
+// Easy version
 // // Get the input to display the result
 // var result = document.getElementById("result");
 //
@@ -18,6 +19,7 @@
 //   result.value = finalResult;
 // }
 
+// Hard Version
 
 // Get the input to display the result
 var result = document.getElementById("result");
@@ -58,7 +60,12 @@ function clearAll() {
 // Delete a number from the input and the current operation
 function del() {
   result.value = result.value.substr(0, (result.value.length - 1));
-  currentOperation = currentOperation.substr(0, (currentOperation.length - 1));
+  if (triggerOperation === false) {
+    currentOperation = currentOperation.substr(0, (currentOperation.length - 1));
+  }
+  else {
+    currentOperation = currentOperation.substr(0, (currentOperation.length - 2));
+  }
 }
 
 // On click on = eval the content of the result input content and display the result
