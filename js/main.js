@@ -21,10 +21,14 @@
 
 // Get the input to display the result
 var result = document.getElementById("result");
-var currentOperation = "";
+
+// Store the current operation as it is
+var currentOperation = "0";
+
+// Tell if an operator as been triggered in order to know if the input value needs to be deleted
 var triggerOperation = false;
 
-// On click on number or operator adds it to the result input
+// On click on number add it to the current operation
 function getValue(object) {
   if (triggerOperation === true) {
     result.value = "";
@@ -34,27 +38,26 @@ function getValue(object) {
   triggerOperation = false;
 }
 
+// On click on operator eval the intermediate result for multi terms operations
 function getOperator(object) {
-  if (result.value !== ""){
-    currentOperation = result.value;
-  }
+  var intermediateResult = eval(currentOperation);
+  result.value = intermediateResult;
+  currentOperation = intermediateResult;
   currentOperation += object.innerHTML;
   triggerOperation = true;
 }
+
+
 // Clear the result input
 function clearAll() {
   result.value = "";
   currentOperation = "";
+  intermediateResult = "";
 }
 
 // On click on = eval the content of the result input content and display the result
 function operate() {
   var finalResult = eval(currentOperation);
-  if(isNaN(finalResult)) {
-    result.value  = "Error";
-  }
-  else {
-    result.value = finalResult;
-    currentOperation = finalResult;
-  }
+  result.value = finalResult;
+  currentOperation = finalResult;
 }
