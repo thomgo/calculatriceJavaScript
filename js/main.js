@@ -42,7 +42,7 @@ function getValue(object) {
 function getOperator(object) {
   var intermediateResult = eval(currentOperation);
   result.value = intermediateResult;
-  currentOperation = intermediateResult;
+  currentOperation = intermediateResult.toString();
   currentOperation += object.innerHTML;
   triggerOperation = true;
 }
@@ -55,9 +55,15 @@ function clearAll() {
   intermediateResult = "";
 }
 
+// Delete a number from the input and the current operation
+function del() {
+  result.value = result.value.substr(0, (result.value.length - 1));
+  currentOperation = currentOperation.substr(0, (currentOperation.length - 1));
+}
+
 // On click on = eval the content of the result input content and display the result
 function operate() {
   var finalResult = eval(currentOperation);
   result.value = finalResult;
-  currentOperation = finalResult;
+  currentOperation = finalResult.toString();
 }
