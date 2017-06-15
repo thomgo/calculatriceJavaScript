@@ -95,7 +95,55 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-   
+h2 {
+  text-align: center;
+  color: black;
+}
+
+input {
+  width: 90%;
+  margin: 1em;
+  background: lightgrey;
+  border-radius: 5px;
+}
+
+#Calculette {
+  width: 95%;
+  margin: auto;
+  max-width: 300px;
+  background-color: darkgreen;
+}
+
+#container {
+  display: flex;
+}
+
+#numbers {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#numbers button {
+  width: 30%;
+  height: 50px;
+  margin: 1em 0;
+}
+
+#operations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 28%;
+}
+
+#operations button {
+  width: 80%;
+}
+
+
 
 /* ##################################################################### */
 /* ##########################   SMARTPHONE   ########################### */
