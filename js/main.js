@@ -1,4 +1,7 @@
-// Easy version
+//
+//~~~~~~~ Easy version ~~~~~~~
+//
+
 // // Get the input to display the result
 // var result = document.getElementById("result");
 //
@@ -19,7 +22,9 @@
 //   result.value = finalResult;
 // }
 
-// Hard Version
+//
+//~~~~~~~ Hard version ~~~~~~~
+//
 
 // Get the input to display the result
 var result = document.getElementById("result");
