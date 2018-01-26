@@ -30,7 +30,7 @@
 var result = document.getElementById("result");
 
 // Store the current operation as it is
-var currentOperation = "0";
+var currentOperation = "";
 
 // Tell if an operator as been triggered in order to know if the input value needs to be deleted
 var triggerOperation = false;
