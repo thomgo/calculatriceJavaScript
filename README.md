@@ -4,7 +4,7 @@ Il s'agit d'un exercice JavaScript que j'ai réalisé dans le cadre de mon poste
 
 D'un niveau un peu plus élevé que le slider, ce projet est donné dans les premières semaines du DOM aux étudiants présentant déjà une certaine aisance dans la programmation JavaScript. La plus grande difficulté étant la gestion des types et la conservation de la cohérance de l'opération selon le comportement utilisateur.  
 
-Projet visible à : https://thomgo.github.io/calculatriveJavaScript/
+Projet visible à : https://thomgo.github.io/calculatriceJavaScript/
 
 Les étudiants apprennent à :
 
