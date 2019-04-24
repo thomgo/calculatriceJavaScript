@@ -7,19 +7,19 @@
 //
 // // On click on number or operator adds it to the result input
 // function getValue(object) {
-//   result.value += object.innerHTML;
+//   result.innerHTML += object.innerHTML;
 // }
 //
 // // Clear the result input
 // function clearAll() {
-//   result.value = "";
+//   result.innerHTML = "";
 // }
 //
 // // On click on = eval the content of the result input content and display the result
 // function operate() {
-//   var operation = result.value;
+//   var operation = result.innerHTML;
 //   var finalResult = eval(operation);
-//   result.value = finalResult;
+//   result.innerHTML = finalResult;
 // }
 
 //
@@ -38,17 +38,17 @@ var triggerOperation = false;
 // On click on number add it to the current operation
 function getValue(object) {
   if (triggerOperation === true) {
-    result.value = "";
+    result.innerHTML = "";
   }
   currentOperation += object.innerHTML;
-  result.value += object.innerHTML;
+  result.innerHTML += object.innerHTML;
   triggerOperation = false;
 }
 
 // On click on operator eval the intermediate result for multi terms operations
 function getOperator(object) {
   var intermediateResult = eval(currentOperation);
-  result.value = intermediateResult;
+  result.innerHTML = intermediateResult;
   currentOperation = intermediateResult.toString();
   currentOperation += object.innerHTML;
   triggerOperation = true;
@@ -57,14 +57,14 @@ function getOperator(object) {
 
 // Clear the result input
 function clearAll() {
-  result.value = "";
+  result.innerHTML = "";
   currentOperation = "";
   intermediateResult = "";
 }
 
 // Delete a number from the input and the current operation
 function del() {
-  result.value = result.value.substr(0, (result.value.length - 1));
+  result.innerHTML = result.innerHTML.substr(0, (result.innerHTML.length - 1));
   if (triggerOperation === false) {
     currentOperation = currentOperation.substr(0, (currentOperation.length - 1));
   }
@@ -76,6 +76,6 @@ function del() {
 // On click on = eval the content of the result input content and display the result
 function operate() {
   var finalResult = eval(currentOperation);
-  result.value = finalResult;
+  result.innerHTML = finalResult;
   currentOperation = finalResult.toString();
 }
